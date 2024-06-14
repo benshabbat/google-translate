@@ -1,8 +1,8 @@
+import { auth } from "@clerk/nextjs/server";
 
 const TranslatePage = () => {
-  return (
-    <div>Translate</div>
-  )
-}
+  auth().protect();
+  return <div>Translate</div>;
+};
 
-export default TranslatePage
+export default TranslatePage;
