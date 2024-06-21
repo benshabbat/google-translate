@@ -18,12 +18,17 @@ const Header = () => {
           ></Image>
         </Link>
       </div>
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
+      {userId ? (
+        <div>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
+      ) : (
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+      )}
     </header>
   );
 };
