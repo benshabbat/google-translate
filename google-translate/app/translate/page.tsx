@@ -20,10 +20,11 @@ const TranslatePage = async () => {
       revalidate: 60 * 60 * 24, //cache the res 24h refresh
     },
   });
+  const languages = await response.json() as TranslationLanguages;
   
   return (
     <div>
-      <TranslationForm />
+      <TranslationForm languages={languages} />
     </div>
   );
 };
