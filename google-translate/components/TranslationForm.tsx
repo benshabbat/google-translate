@@ -1,5 +1,8 @@
 "use client";
-const TranslationForm = () => {
+
+import { TranslationLanguages } from "@/app/translate/page";
+
+const TranslationForm = ({languages}:{languages:TranslationLanguages}) => {
   return (
     <div>
       <form></form>
